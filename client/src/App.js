@@ -11,13 +11,14 @@ import Instructors from "./views/Instructors";
 import Cart from "./views/cart/Cart";
 import Footer from "./views/Footer";
 import ReactPlayer from "react-player";
-import Video from "./assets/ANYWHERE.mp4";
+import Video from "./assets/ANYWHERE2.mp4";
 import React, { useEffect } from "react";
 import {useDispatch} from "react-redux";
 import {getAccountStatus} from "./state/actions/index";
 import Checkout from "./views/cart/Checkout";
 import CheckoutSuccess from "./views/cart/CheckoutSuccess";
 function App() {
+
   // if previously logged in, grab the account status using the actions
   const dispatch = useDispatch();
   useEffect(()=>{
@@ -26,7 +27,8 @@ function App() {
   //
   return (
     <Router>
-      <div className={"d-flex flex-column justify-content-start align-items-center wrapper"}>
+  
+      <div className={"d-flex flex-column justify-content-start align-items-center wrapper"} >
         <Nav />
         <div
           className="d-flex justify-content-center flex-column"
@@ -46,9 +48,9 @@ function App() {
           <Link
             to="home"
             className="button"
-            style={{ color: "white", padding: "3vh 300px", border: '1px solid white', borderRadius: '50px', margin: '10vh 0', backgroundColor: '#222', opacity: '0.8' }}
+            style={{ color: "white", height: '75px', width: 350, border: '1px solid white', borderRadius: '50px', backgroundColor: '#222', opacity: '0.8', textAlign: 'center' }}
           >
-            <h4 style={{ color: "white"}}>Step Inside</h4>
+           <h2 style={{marginTop: '15px'}}>Step Inside</h2>
           </Link>
         </div>
         <Switch>
