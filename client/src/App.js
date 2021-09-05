@@ -10,8 +10,9 @@ import Classes from "./views/classes/Classes";
 import Instructors from "./views/Instructors";
 import Cart from "./views/cart/Cart";
 import Footer from "./views/Footer";
-import ReactPlayer from "react-player";
-import Video from "./assets/ANYWHERE2.mp4";
+// import ReactPlayer from "react-player";
+// import Video from "./assets/ANYWHERE2.mp4";
+import AnywhereFitness from "./assets/anywhereWhite.png";
 import React, { useEffect } from "react";
 import {useDispatch} from "react-redux";
 import {getAccountStatus} from "./state/actions/index";
@@ -36,15 +37,7 @@ function App() {
             marginTop: '20vh'
           }}
         >
-          <ReactPlayer
-            url={Video}
-            playing={true}
-            loop={true}
-            height={'40vh'}
-            style={{margin: 'auto auto', }}
-            id={'video-player'}
-            playsinline={true}
-        />
+         <img src={AnywhereFitness} alt="video" style={{width: '100%'}}/>
           <Link
             to="home"
             className="button"
